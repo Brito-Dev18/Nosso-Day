@@ -66,10 +66,9 @@ body {
     gap: 20px; /* Adiciona espaço entre as imagens */
 }
 .carousel-inner img {
-    width: 100%;
+    flex: 0 0 auto; /* Garante que as imagens não se redimensionem */
     max-height: 500px; /* Definindo altura máxima */
     object-fit: cover; /* Ajustando a imagem sem distorção */
-    margin: 0 10px; /* Adicionando margem entre as imagens */
 }
 .carousel-btn {
     position: absolute;
