@@ -63,7 +63,7 @@ body {
     display: flex;
     transition: transform 0.5s ease;
     justify-content: center;
-    gap: 15px; /* Aumenta o espaço entre as imagens */
+    gap: 9px; /* Aumenta o espaço entre as imagens */
 }
 .carousel-inner img {
     flex: 0 0 auto; /* Garante que as imagens não se redimensionem */
