@@ -62,13 +62,15 @@ body {
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
-    justify-content: center;
-    gap: 20px; /* Adiciona espaço entre as imagens */
 }
 .carousel-inner img {
     flex: 0 0 auto; /* Garante que as imagens não se redimensionem */
     max-height: 500px; /* Definindo altura máxima */
     object-fit: cover; /* Ajustando a imagem sem distorção */
+    margin-right: 20px; /* Adicionando margem à direita para espaçamento */
+}
+.carousel-inner img:last-child {
+    margin-right: 0; /* Remove a margem à direita da última imagem */
 }
 .carousel-btn {
     position: absolute;
