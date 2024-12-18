@@ -68,7 +68,7 @@ body {
     width: 100%;
     max-height: 500px; /* Definindo altura máxima */
     object-fit: cover; /* Ajustando a imagem sem distorção */
-    margin: 0 10px; /* Adicionando margem entre as imagens */
+    margin: 0 20px; /* Aumentando a margem entre as imagens */
 }
 .carousel-btn {
     position: absolute;
