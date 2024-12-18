@@ -62,37 +62,47 @@ body {
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
+    justify-content: center;
+    gap: 40px; /* Aumenta o espaço entre as imagens */
 }
 .carousel-inner img {
     flex: 0 0 auto; /* Garante que as imagens não se redimensionem */
-    width: 100%;
-    max-height: 500px; /* Definindo altura máxima */
+    max-width: 100%; /* Largura máxima */
     object-fit: cover; /* Ajustando a imagem sem distorção */
-    margin-right: 20px; /* Adicionando margem à direita para espaçamento */
 }
-.carousel-inner img:last-child {
-    margin-right: 0; /* Remove a margem à direita da última imagem */
+.carousel-inner img.vertical {
+    height: 500px; /* Altura fixa para imagens verticais */
+}
+.carousel-inner img.horizontal {
+    height: auto;
+    max-height: 500px; /* Altura máxima para imagens horizontais */
 }
 
 /* Media queries para responsividade */
 @media (max-width: 1024px) {
-    .carousel-inner img {
-        max-height: 400px; /* Altura máxima para tablets */
-        margin-right: 10px; /* Margem menor entre as imagens */
+    .carousel-inner img.vertical {
+        height: 400px; /* Altura para tablets */
+    }
+    .carousel-inner img.horizontal {
+        max-height: 400px; /* Altura para tablets */
     }
 }
 
 @media (max-width: 768px) {
-    .carousel-inner img {
-        max-height: 300px; /* Altura máxima para telas menores */
-        margin-right: 5px; /* Margem menor entre as imagens */
+    .carousel-inner img.vertical {
+        height: 300px; /* Altura para telas menores */
+    }
+    .carousel-inner img.horizontal {
+        max-height: 300px; /* Altura para telas menores */
     }
 }
 
 @media (max-width: 480px) {
-    .carousel-inner img {
-        max-height: 200px; /* Altura máxima para telas ainda menores */
-        margin-right: 2px; /* Margem menor entre as imagens */
+    .carousel-inner img.vertical {
+        height: 200px; /* Altura para telas ainda menores */
+    }
+    .carousel-inner img.horizontal {
+        max-height: 200px; /* Altura para telas ainda menores */
     }
 }
 
@@ -107,8 +117,28 @@ body {
     z-index: 1;
 }
 .carousel-btn.prev {
-    left: 10px;
+    left: 20px; /* Aumenta a distância do botão da borda esquerda */
 }
 .carousel-btn.next {
-    right: 10px;
+    right: 20px; /* Aumenta a distância do botão da borda direita */
 }
+
+/* Estilos para a área de texto */
+.text-area {
+    margin-top: 30px;
+    text-align: center;
+}
+.text-area h2 {
+    font-family: 'Lucida Sans', sans-serif;
+    color: #ff6347; /* Vermelho mais suave */
+}
+.text-area textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #ff6347; /* Vermelho mais suave */
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff; /*
